@@ -10,5 +10,5 @@ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 grep -e 'export PATH=$PATH:/usr/local/go/bin\nexport GOPATH=/opt/go' /etc/profile.d/go.sh || echo -e 'export PATH=$PATH:/usr/local/go/bin\nexport GOPATH=/opt/go' > /etc/profile.d/go.sh
 
 
-mkdir -p /opt/go/{src,bin,pkg}
-mkdir -p /opt/go/src/github.com/lukebakare
+# mkdir -p /opt/go/{src,bin,pkg}
+# mkdir -p /opt/go/src/github.com/lukebakare
