@@ -9,6 +9,6 @@ curl -O https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 mkdir -p /opt/go/{src,bin,pkg}
 grep 'export PATH=$PATH:/usr/local/go/bin' /etc/profile || echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
-grep 'GOPATH=/opt/go' /etc/profile || echo 'GOPATH=/opt/go' >> /etc/profile
+grep 'export GOPATH=/opt/go' /etc/profile || echo 'export GOPATH=/opt/go' >> /etc/profile
 
 mkdir -p /opt/go/src/github.com/lukebakare
