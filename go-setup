@@ -10,7 +10,7 @@ curl -O https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 rm go$VERSION.$OS-$ARCH.tar.gz
 # su to root in order to modify /etc/ directory
-grep -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/$USER/go' /etc/profile.d/go.sh || sudo su - -c "echo -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/$USER/go' > /etc/profile.d/go.sh"
+grep -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/home/$USER/go' /etc/profile.d/go.sh || sudo su - -c "echo -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/home/$USER/go' > /etc/profile.d/go.sh"
 
-# mkdir -p /opt/go/{src,bin,pkg}
-# mkdir -p /opt/go/src/github.com/lukebakare
+# mkdir -p /home/$USER/go/{src,bin,pkg}
+# mkdir -p /home/$USER/go/src/github.com/lukebakare
