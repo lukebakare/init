@@ -7,6 +7,7 @@ ARCH=amd64
 
 curl -O https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+rm go$VERSION.$OS-$ARCH.tar.gz
 # su to root in order to modify /etc/ directory
 grep -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/opt/go' /etc/profile.d/go.sh || sudo su - -c "echo -e 'export PATH=\$PATH:/usr/local/go/bin\nexport GOPATH=/opt/go' > /etc/profile.d/go.sh"
 
