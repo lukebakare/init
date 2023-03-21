@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+usermod -l lukebakare ubuntu
+groupmod -n lukebakare ubuntu
+usermod -d /home/lukebakare -m lukebakare
+usermod -c "lukebakare" lukebakare
+
+echo 'lukebakare ALL=(ALL) NOPASSWD: ALL' | EDITOR='tee -a' visudo
+
+apt update
+
+apt upgrade -y
