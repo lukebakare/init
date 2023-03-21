@@ -8,6 +8,6 @@ usermod -c "lukebakare" lukebakare
 
 echo 'lukebakare ALL=(ALL) NOPASSWD: ALL' | EDITOR='tee -a' visudo
 
-apt update
+apt-get update
 
-apt upgrade -y
+DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
