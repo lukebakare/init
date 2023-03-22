@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+# Change default ubuntu username
 usermod -l lukebakare ubuntu
 groupmod -n lukebakare ubuntu
 usermod -d /home/lukebakare -m lukebakare
