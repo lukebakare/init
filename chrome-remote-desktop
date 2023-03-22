@@ -10,7 +10,7 @@ echo 'lukebakare ALL=(ALL) NOPASSWD: ALL' | EDITOR='tee -a' visudo
 
 apt-get update
 
-DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+DEBIAN_FRONTEND=noninteractive apt-get --yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
 
 
 # https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine
