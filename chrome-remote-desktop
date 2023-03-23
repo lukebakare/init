@@ -1,11 +1,9 @@
 #!/bin/bash
 
 
-
 apt-get update
 
 DEBIAN_FRONTEND=noninteractive apt-get --yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
-
 
 # https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine
 
