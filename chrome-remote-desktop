@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# Change default ubuntu username
-usermod -l lukebakare ubuntu
-groupmod -n lukebakare ubuntu
-usermod -d /home/lukebakare -m lukebakare
-usermod -c "lukebakare" lukebakare
 
-echo 'lukebakare ALL=(ALL) NOPASSWD: ALL' | EDITOR='tee -a' visudo
 
 apt-get update
 
@@ -31,4 +25,3 @@ bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remo
 curl -L -o google-chrome-stable_current_amd64.deb \
 https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install --assume-yes ./google-chrome-stable_current_amd64.deb
-
